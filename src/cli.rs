@@ -24,9 +24,13 @@ pub mod console {
     }
 
     pub fn get_number(message: &str) -> i32 {
-        match get_str(message).trim().parse::<i32>() {
-            Ok(inp) => inp,
-            Err(_) => panic!("couldn't read number from terminal :/")
+        let input = get_input(message);
+        match input.number.is_none() {
+            false => input.number.unwrap(),
+            true => {
+                println!("please write a number!");
+                get_number(message)
+            }
         }
     }
 
