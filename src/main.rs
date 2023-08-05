@@ -1,12 +1,13 @@
-use std::fmt::format;
+use std::{fmt::format, thread, time::{self, Duration}};
 
 use rand::Rng;
 
 mod player;
 use player::{Player};
 
-mod cli;
-use cli::console;
+use crate::{console::dot_loading_animation};
+mod console;
+mod util;
 
 struct Settings {
     credit: i32,
@@ -91,11 +92,14 @@ fn main() {
     println!("Welcome to this simple poker cli!");
     println!("you can quit any time by typing either 'q' or 'quit'!");
     println!("have fun!");
+    dot_loading_animation("loading game", "done loading!", 2);
     
     let mut settings: Settings = Default::default();
     settings_setup(&mut settings, false);
 
     println!("setting basic data done");
+    loop {
 
+    }
 
 }
