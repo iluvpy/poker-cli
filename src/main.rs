@@ -92,14 +92,27 @@ fn main() {
     println!("Welcome to this simple poker cli!");
     println!("you can quit any time by typing either 'q' or 'quit'!");
     println!("have fun!");
-    dot_loading_animation("loading game", "done loading!", 2);
     
     let mut settings: Settings = Default::default();
     settings_setup(&mut settings, false);
 
     println!("setting basic data done");
+    dot_loading_animation("loading game", "done loading!", 1);
+    // game loop
     loop {
+        // inital bet
 
+        // first round
+        //...
+
+        // first 3 cards uncovered
+        //...
+        
+        // next card uncovered
+        //...
+        // next card uncovered
+        
+        // find winner 
     }
 
 }
